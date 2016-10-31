@@ -1,0 +1,1795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.bolaihui.weight.gui.form.WeightForm">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1000" height="620"/>
+    </constraints>
+    <properties>
+      <maximumSize width="1000" height="600"/>
+      <minimumSize width="1000" height="600"/>
+      <preferredSize width="1000" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="a98f4" layout-manager="GridLayoutManager" row-count="1" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="40"/>
+            <preferred-size width="-1" height="40"/>
+            <maximum-size width="-1" height="40"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="425b1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <foreground color="-16777216"/>
+              <text value="用户名:"/>
+            </properties>
+          </component>
+          <component id="108ca" class="javax.swing.JTextField" binding="userName">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="130" height="30"/>
+                <preferred-size width="130" height="30"/>
+                <maximum-size width="130" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-12316161"/>
+            </properties>
+          </component>
+          <component id="5887f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <foreground color="-16777216"/>
+              <text value="密码:"/>
+            </properties>
+          </component>
+          <component id="fa54b" class="javax.swing.JPasswordField" binding="passWord">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="130" height="30"/>
+                <preferred-size width="130" height="30"/>
+                <maximum-size width="130" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-12316161"/>
+            </properties>
+          </component>
+          <component id="602c0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <foreground color="-16777216"/>
+              <text value="(回车登陆)"/>
+            </properties>
+          </component>
+          <component id="ff5f1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <foreground color="-16777216"/>
+              <text value="登陆状态:"/>
+            </properties>
+          </component>
+          <component id="2c62a" class="javax.swing.JLabel" binding="loginStatus">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="60" height="-1"/>
+                <preferred-size width="60" height="-1"/>
+                <maximum-size width="60" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font style="3"/>
+              <foreground color="-12316161"/>
+              <text value="尚未登陆"/>
+            </properties>
+          </component>
+          <component id="743ce" class="javax.swing.JLabel" binding="loginName">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="70" height="-1"/>
+                <preferred-size width="70" height="-1"/>
+                <maximum-size width="70" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <foreground color="-5439233"/>
+              <text value="☆☆☆☆"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="4c356" layout-manager="GridLayoutManager" row-count="1" column-count="12" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="40"/>
+            <preferred-size width="-1" height="40"/>
+            <maximum-size width="-1" height="40"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="e43cb" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="电子称连接状态:"/>
+            </properties>
+          </component>
+          <hspacer id="41d9b">
+            <constraints>
+              <grid row="0" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="b94bf" class="javax.swing.JLabel" binding="connectStatus">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="60" height="-1"/>
+                <preferred-size width="60" height="-1"/>
+                <maximum-size width="60" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font style="3"/>
+              <foreground color="-12316161"/>
+              <text value="尚未连接"/>
+            </properties>
+          </component>
+          <component id="aeb75" class="javax.swing.JButton" binding="connectBtn">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+                <maximum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-7209076"/>
+              <enabled value="false"/>
+              <foreground color="-12316161"/>
+              <text value="连接"/>
+            </properties>
+          </component>
+          <component id="215ee" class="javax.swing.JButton" binding="disConnectBtn">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+                <maximum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-41121"/>
+              <enabled value="false"/>
+              <foreground color="-12316161"/>
+              <text value="断开"/>
+            </properties>
+          </component>
+          <component id="4ea4a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="自贸达:"/>
+            </properties>
+          </component>
+          <component id="85ca" class="javax.swing.JButton" binding="zmdExportBtn">
+            <constraints>
+              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+                <maximum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <text value="核放单导出"/>
+            </properties>
+          </component>
+          <component id="93c28" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="菜鸟:"/>
+            </properties>
+          </component>
+          <component id="446c" class="javax.swing.JButton" binding="cnExportBtn">
+            <constraints>
+              <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+                <maximum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <text value="核放单导出"/>
+            </properties>
+          </component>
+          <component id="d19ea" class="javax.swing.JButton" binding="cnInterceptBtn">
+            <constraints>
+              <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+                <maximum-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <text value="拦截订单导出"/>
+            </properties>
+          </component>
+          <component id="7460f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="导出日期:"/>
+            </properties>
+          </component>
+          <component id="5f330" class="javax.swing.JTextField" binding="exportDate">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="110" height="30"/>
+                <preferred-size width="110" height="30"/>
+                <maximum-size width="110" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <font size="16" style="1"/>
+              <foreground color="-12316161"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <tabbedpane id="8c78c" binding="tabbedPane">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="510"/>
+            <preferred-size width="-1" height="510"/>
+            <maximum-size width="-1" height="510"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1513240"/>
+          <enabled value="true"/>
+        </properties>
+        <border type="empty">
+          <title-color color="-16777216"/>
+        </border>
+        <children>
+          <grid id="50947" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="模式选择"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="16f96" class="javax.swing.JButton" binding="zmdModelBtn">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="450" height="350"/>
+                    <preferred-size width="450" height="350"/>
+                    <maximum-size width="450" height="350"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <font size="72" style="3"/>
+                  <foreground color="-37376"/>
+                  <text value="自贸达模式"/>
+                </properties>
+              </component>
+              <component id="28294" class="javax.swing.JButton" binding="cnModelBtn">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="450" height="350"/>
+                    <preferred-size width="450" height="350"/>
+                    <maximum-size width="450" height="350"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <font size="72" style="3"/>
+                  <foreground color="-65292"/>
+                  <text value="菜鸟模式"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="e0ced" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="自贸达称重"/>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="85503" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="c48e" class="javax.swing.JButton" binding="zmdWeightBeginBtn">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16711906"/>
+                      <enabled value="false"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="清零开始"/>
+                    </properties>
+                  </component>
+                  <component id="b331e" class="javax.swing.JButton" binding="zmdWeightEndBtn">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-58349"/>
+                      <enabled value="false"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="结束生成托盘位置"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <vspacer id="e26c">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <grid id="17e78" layout-manager="GridLayoutManager" row-count="1" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="30"/>
+                    <preferred-size width="-1" height="30"/>
+                    <maximum-size width="-1" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="6f100" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="正常"/>
+                    </properties>
+                  </component>
+                  <hspacer id="84477">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <component id="dbadf" class="javax.swing.JLabel" binding="zmdWeightYesCount">
+                    <constraints>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="120" height="-1"/>
+                        <preferred-size width="120" height="-1"/>
+                        <maximum-size width="120" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-15212535"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="edd14" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="异常"/>
+                    </properties>
+                  </component>
+                  <component id="7a9c9" class="javax.swing.JLabel" binding="zmdWeightNoCount">
+                    <constraints>
+                      <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="130" height="-1"/>
+                        <preferred-size width="130" height="-1"/>
+                        <maximum-size width="130" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-58349"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="c562f" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="称重模式:"/>
+                    </properties>
+                  </component>
+                  <component id="eb7b5" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="90" height="-1"/>
+                        <preferred-size width="90" height="-1"/>
+                        <maximum-size width="90" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="      "/>
+                    </properties>
+                  </component>
+                  <component id="afc97" class="javax.swing.JLabel" binding="zmdWeightModel">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="180" height="-1"/>
+                        <preferred-size width="180" height="-1"/>
+                        <maximum-size width="180" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-12316161"/>
+                      <text value="重量不检查模式"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="a91a3" layout-manager="GridLayoutManager" row-count="1" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ce338" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="45"/>
+                        <preferred-size width="-1" height="45"/>
+                        <maximum-size width="-1" height="45"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="48" style="1"/>
+                      <foreground color="-15422711"/>
+                      <text value="称重重量"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="61840" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="e69c0" class="javax.swing.JLabel" binding="zmdWeightValue">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="40"/>
+                        <preferred-size width="-1" height="40"/>
+                        <maximum-size width="-1" height="40"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="28" style="1"/>
+                      <foreground color="-12316161"/>
+                      <text value="0.0kg"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="63d5" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="a6063" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="上一单:"/>
+                    </properties>
+                  </component>
+                  <component id="e32aa" class="javax.swing.JLabel" binding="zmdWeightEmsInfo">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="500" height="-1"/>
+                        <preferred-size width="500" height="-1"/>
+                        <maximum-size width="500" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="运单号 | 重量 | 状态"/>
+                    </properties>
+                  </component>
+                  <hspacer id="7b91d">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="290" height="-1"/>
+                        <preferred-size width="290" height="-1"/>
+                        <maximum-size width="290" height="-1"/>
+                      </grid>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+              <grid id="5f8b6" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="650" height="220"/>
+                    <preferred-size width="650" height="220"/>
+                    <maximum-size width="650" height="220"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="aece1" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="b090d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运单号"/>
+                        </properties>
+                      </component>
+                      <component id="7ef44" class="javax.swing.JTextField" binding="zmdWeightEmsNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <enabled value="false"/>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="e1e3e" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="b9189" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="箱条码"/>
+                        </properties>
+                      </component>
+                      <component id="670be" class="javax.swing.JTextField" binding="zmdWeightBoxNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <enabled value="false"/>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                      <component id="af84e" class="javax.swing.JButton" binding="zmdWeightBoxOpenBtn">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-16711906"/>
+                          <enabled value="false"/>
+                          <foreground color="-12316161"/>
+                          <text value="开启"/>
+                        </properties>
+                      </component>
+                      <component id="805b6" class="javax.swing.JButton" binding="zmdWeightBoxCloseBtn">
+                        <constraints>
+                          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-58349"/>
+                          <enabled value="false"/>
+                          <foreground color="-12316161"/>
+                          <text value="禁用"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="483a1" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="c2b26" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运码长"/>
+                        </properties>
+                      </component>
+                      <component id="cef8" class="javax.swing.JTextField" binding="zmdWeightEmsLength">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                          <text value="12"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="5f3bc" binding="zmdWeightEmsColor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="45"/>
+                        <preferred-size width="-1" height="45"/>
+                        <maximum-size width="-1" height="45"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1536"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="36dfb" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="自贸达扫描"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="b4f7c" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="30"/>
+                    <preferred-size width="-1" height="30"/>
+                    <maximum-size width="-1" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <hspacer id="ce7c8">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <component id="3e2e8" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="正常"/>
+                    </properties>
+                  </component>
+                  <component id="1cd6b" class="javax.swing.JLabel" binding="zmdScanYesCount">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="120" height="-1"/>
+                        <preferred-size width="120" height="-1"/>
+                        <maximum-size width="120" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-15212535"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="c71c2" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="异常"/>
+                    </properties>
+                  </component>
+                  <component id="1820" class="javax.swing.JLabel" binding="zmdScanNoCount">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="130" height="-1"/>
+                        <preferred-size width="130" height="-1"/>
+                        <maximum-size width="130" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-58349"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="7ebd" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="5ac68" class="javax.swing.JButton" binding="zmdScanBeginBtn">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16711906"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="清零开始"/>
+                    </properties>
+                  </component>
+                  <component id="1b031" class="javax.swing.JButton" binding="zmdScanEndBtn">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-58349"/>
+                      <enabled value="false"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="结束生成托盘位置"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="91ad7" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="650" height="180"/>
+                    <preferred-size width="650" height="180"/>
+                    <maximum-size width="650" height="180"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="de085" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="3d7e0" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运单号"/>
+                        </properties>
+                      </component>
+                      <component id="91487" class="javax.swing.JTextField" binding="zmdScanEmsNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="786e2" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="fa6b" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运码长"/>
+                        </properties>
+                      </component>
+                      <component id="3790c" class="javax.swing.JTextField" binding="zmdScanEmsLength">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                          <text value="12"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="bd61a" binding="zmdScanEmsColor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="45"/>
+                        <preferred-size width="-1" height="45"/>
+                        <maximum-size width="-1" height="45"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1536"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <vspacer id="e64d3">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <grid id="4b40d" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9533c" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="上一单:"/>
+                    </properties>
+                  </component>
+                  <component id="138f1" class="javax.swing.JLabel" binding="zmdScanEmsInfo">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="500" height="-1"/>
+                        <preferred-size width="500" height="-1"/>
+                        <maximum-size width="500" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="运单号 | 状态"/>
+                    </properties>
+                  </component>
+                  <hspacer id="f8c89">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="330" height="-1"/>
+                        <preferred-size width="330" height="-1"/>
+                        <maximum-size width="330" height="-1"/>
+                      </grid>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+              <grid id="e816b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="85"/>
+                    <preferred-size width="-1" height="85"/>
+                    <maximum-size width="-1" height="85"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+          <grid id="38e88" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="菜鸟称重"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="16105" layout-manager="GridLayoutManager" row-count="1" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="30"/>
+                    <preferred-size width="-1" height="30"/>
+                    <maximum-size width="-1" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <hspacer id="30a7a">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <component id="dabad" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="正常"/>
+                    </properties>
+                  </component>
+                  <component id="bd769" class="javax.swing.JLabel" binding="cnWeightYesCount">
+                    <constraints>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="120" height="-1"/>
+                        <preferred-size width="120" height="-1"/>
+                        <maximum-size width="120" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-15212535"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="dad90" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="异常"/>
+                    </properties>
+                  </component>
+                  <component id="19f08" class="javax.swing.JLabel" binding="cnWeightNoCount">
+                    <constraints>
+                      <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="130" height="-1"/>
+                        <preferred-size width="130" height="-1"/>
+                        <maximum-size width="130" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-58349"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="ea727" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="称重模式:"/>
+                    </properties>
+                  </component>
+                  <component id="4125f" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="90" height="-1"/>
+                        <preferred-size width="90" height="-1"/>
+                        <maximum-size width="90" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="      "/>
+                    </properties>
+                  </component>
+                  <component id="db04c" class="javax.swing.JLabel" binding="cnWeightModel">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="180" height="-1"/>
+                        <preferred-size width="180" height="-1"/>
+                        <maximum-size width="180" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-12316161"/>
+                      <text value="重量不检查模式"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <vspacer id="c8f87">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <grid id="31a2f" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="9df42" class="javax.swing.JButton" binding="cnWeightBeginBtn">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16711906"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="清零开始"/>
+                    </properties>
+                  </component>
+                  <component id="c1e9a" class="javax.swing.JButton" binding="cnWeightEndBtn">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-58349"/>
+                      <enabled value="false"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="结束生成托盘位置"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="199c0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="45"/>
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="48" style="1"/>
+                  <foreground color="-15422711"/>
+                  <text value="称重重量"/>
+                </properties>
+              </component>
+              <component id="529ac" class="javax.swing.JLabel" binding="cnWeightValue">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="40"/>
+                    <preferred-size width="-1" height="40"/>
+                    <maximum-size width="-1" height="40"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="28" style="1"/>
+                  <foreground color="-12316161"/>
+                  <text value="0.0kg"/>
+                </properties>
+              </component>
+              <grid id="1f3d0" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="ae30b" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="上一单:"/>
+                    </properties>
+                  </component>
+                  <component id="25dce" class="javax.swing.JLabel" binding="cnWeightEmsInfo">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="500" height="-1"/>
+                        <preferred-size width="500" height="-1"/>
+                        <maximum-size width="500" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="运单号 | 重量 | 状态"/>
+                    </properties>
+                  </component>
+                  <hspacer id="97f03">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="290" height="-1"/>
+                        <preferred-size width="290" height="-1"/>
+                        <maximum-size width="290" height="-1"/>
+                      </grid>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+              <grid id="5c683" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="650" height="220"/>
+                    <preferred-size width="650" height="220"/>
+                    <maximum-size width="650" height="220"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="95767" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="49a48" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运单号"/>
+                        </properties>
+                      </component>
+                      <component id="f6850" class="javax.swing.JTextField" binding="cnWeightEmsNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <enabled value="true"/>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="67927" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="fcd83" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="箱条码"/>
+                        </properties>
+                      </component>
+                      <component id="fcccf" class="javax.swing.JTextField" binding="cnWeightBoxNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <enabled value="true"/>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="77d78" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="d9709" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运码长"/>
+                        </properties>
+                      </component>
+                      <component id="c7d50" class="javax.swing.JTextField" binding="cnWeightEmsLength">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                          <text value="13"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="430d9" binding="cnWeightEmsColor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="45"/>
+                        <preferred-size width="-1" height="45"/>
+                        <maximum-size width="-1" height="45"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1536"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="bc43" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="菜鸟清关检查"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <vspacer id="8a6b8">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <grid id="754aa" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="5179" class="javax.swing.JButton" binding="cnCheckBeginBtn">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16711906"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="清零开始"/>
+                    </properties>
+                  </component>
+                  <component id="bab45" class="javax.swing.JButton" binding="cnCheckEndBtn">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="450" height="50"/>
+                        <preferred-size width="450" height="50"/>
+                        <maximum-size width="450" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-58349"/>
+                      <enabled value="false"/>
+                      <font size="26" style="3"/>
+                      <foreground color="-12316161"/>
+                      <text value="结束导出扫描核放单"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="e09d" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="30"/>
+                    <preferred-size width="-1" height="30"/>
+                    <maximum-size width="-1" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <hspacer id="dae7a">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <component id="741b5" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="正常"/>
+                    </properties>
+                  </component>
+                  <component id="c0190" class="javax.swing.JLabel" binding="cnCheckYesCount">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="120" height="-1"/>
+                        <preferred-size width="120" height="-1"/>
+                        <maximum-size width="120" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-15212535"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <component id="68fc0" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <text value="异常"/>
+                    </properties>
+                  </component>
+                  <component id="183bd" class="javax.swing.JLabel" binding="cnCheckNoCount">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="130" height="-1"/>
+                        <preferred-size width="130" height="-1"/>
+                        <maximum-size width="130" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="23"/>
+                      <foreground color="-58349"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="e9aa" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="85"/>
+                    <preferred-size width="-1" height="85"/>
+                    <maximum-size width="-1" height="85"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="83643" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="946d" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="上一单:"/>
+                    </properties>
+                  </component>
+                  <component id="d4b20" class="javax.swing.JLabel" binding="cnCheckEmsInfo">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="500" height="-1"/>
+                        <preferred-size width="500" height="-1"/>
+                        <maximum-size width="500" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font size="26" style="1"/>
+                      <foreground color="-3203329"/>
+                      <text value="运单号 | 状态"/>
+                    </properties>
+                  </component>
+                  <hspacer id="235b4">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="330" height="-1"/>
+                        <preferred-size width="330" height="-1"/>
+                        <maximum-size width="330" height="-1"/>
+                      </grid>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+              <grid id="596f" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="650" height="180"/>
+                    <preferred-size width="650" height="180"/>
+                    <maximum-size width="650" height="180"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="a3fd0" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="363b8" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运单号"/>
+                        </properties>
+                      </component>
+                      <component id="1308e" class="javax.swing.JTextField" binding="cnCheckEmsNo">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="fdd2f" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                        <preferred-size width="-1" height="50"/>
+                        <maximum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="43cc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="90" height="-1"/>
+                            <preferred-size width="90" height="-1"/>
+                            <maximum-size width="90" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24"/>
+                          <text value="运码长"/>
+                        </properties>
+                      </component>
+                      <component id="f5724" class="javax.swing.JTextField" binding="cnCheckEmsLength">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="-1" height="40"/>
+                            <preferred-size width="-1" height="40"/>
+                            <maximum-size width="-1" height="40"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <font size="24" style="1"/>
+                          <foreground color="-12316161"/>
+                          <text value="13"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="35c92" binding="cnCheckEmsColor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="45"/>
+                        <preferred-size width="-1" height="45"/>
+                        <maximum-size width="-1" height="45"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1536"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="17bde" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="误差范围设置"/>
+            </constraints>
+            <properties>
+              <enabled value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="6d122" class="javax.swing.JTextField" binding="weightScopeValue">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <minimum-size width="500" height="40"/>
+                    <preferred-size width="500" height="40"/>
+                    <maximum-size width="500" height="40"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <font size="20"/>
+                  <foreground color="-12316161"/>
+                </properties>
+              </component>
+              <vspacer id="1b96c">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="37f03" class="javax.swing.JButton" binding="weightScopeBtn">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="500" height="40"/>
+                    <preferred-size width="500" height="40"/>
+                    <maximum-size width="500" height="40"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <text value="设置"/>
+                </properties>
+              </component>
+              <component id="f7bde" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <text value="当前误差值(单位：kg)"/>
+                </properties>
+              </component>
+              <grid id="b9374" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="150"/>
+                    <preferred-size width="-1" height="150"/>
+                    <maximum-size width="-1" height="150"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
