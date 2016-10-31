@@ -195,7 +195,7 @@ public class WeightService implements SerialPortEventListener, Runnable {
 
         Thread.sleep(5);
         // 等待完整的称重数据
-        byte[] readBuffer = new byte[256];
+        byte[] readBuffer = new byte[1024];
         if (inputStream.available() >= 18) {
             while (inputStream.available() > 0) {
                 int c = inputStream.read(readBuffer);
@@ -230,7 +230,7 @@ public class WeightService implements SerialPortEventListener, Runnable {
 
         BigDecimal weight = new BigDecimal(weightValue.replace("+", "").replace("-", "").trim());
         if (StringUtils.equals("g", unitStr.trim())) {
-            weight = weight.divide(new BigDecimal(1000), BigDecimal.ROUND_HALF_UP);
+            weight = weight.divide(new BigDecimal(1000), 4, BigDecimal.ROUND_HALF_UP);
         }
         weight = weight.setScale(4, BigDecimal.ROUND_HALF_UP);
         // 自贸达称重部分
