@@ -16,7 +16,8 @@ public class ModelService {
             JTabbedPane tabbedPane = weightContext.getWeightForm().getTabbedPane();
             tabbedPane.setEnabledAt(1, true);
             tabbedPane.setEnabledAt(2, true);
-            tabbedPane.setEnabledAt(0, false);
+            tabbedPane.setEnabledAt(3, false);
+            tabbedPane.setEnabledAt(4, false);
             tabbedPane.setSelectedIndex(1);
             weightContext.getWeightForm().getConnectBtn().setEnabled(true);
             // 直接尝试一次电子秤连接
@@ -29,7 +30,8 @@ public class ModelService {
             JTabbedPane tabbedPane = weightContext.getWeightForm().getTabbedPane();
             tabbedPane.setEnabledAt(3, true);
             tabbedPane.setEnabledAt(4, true);
-            tabbedPane.setEnabledAt(0, false);
+            tabbedPane.setEnabledAt(1, false);
+            tabbedPane.setEnabledAt(2, false);
             tabbedPane.setSelectedIndex(3);
             SwingUtilities.invokeLater(() -> {
                 weightContext.getWeightForm().getCnWeightEmsNo().requestFocus();
