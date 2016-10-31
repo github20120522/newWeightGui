@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Created by Administrator on 2016/10/26 0026.
  */
-public class MainGui {
+public class MainGUI {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
