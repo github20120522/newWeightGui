@@ -146,9 +146,11 @@ public class ZmdScanService {
             File zmdScanNoFile = new File("./data/zmdScanNoData.data");
             if (zmdScanNoFile.exists()) {
                 String zmdScanNoJson = FileUtils.readFileToString(zmdScanNoFile);
-                Set zmdScanNoSet = BaseUtil.parseJson(zmdScanNoJson, Set.class);
-                weightContext.getZmdScanNoSet().addAll(zmdScanNoSet);
-                restoreSuccess = true;
+                if (StringUtils.isNotBlank(zmdScanNoJson)) {
+                    Set zmdScanNoSet = BaseUtil.parseJson(zmdScanNoJson, Set.class);
+                    weightContext.getZmdScanNoSet().addAll(zmdScanNoSet);
+                    restoreSuccess = true;
+                }
             }
             if (restoreSuccess) {
                 SwingUtilities.invokeLater(() -> {
@@ -158,7 +160,8 @@ public class ZmdScanService {
                 });
             }
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
+            logger.error(BaseUtil.getExceptionStackTrace(e));
         }
     }
 

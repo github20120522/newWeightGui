@@ -157,9 +157,11 @@ public class CnWeightService {
             File cnWeightNoFile = new File("./data/cnWeightNoData.data");
             if (cnWeightNoFile.exists()) {
                 String cnWeightNoJson = FileUtils.readFileToString(cnWeightNoFile);
-                Set cnWeightNoSet = BaseUtil.parseJson(cnWeightNoJson, Set.class);
-                weightContext.getCnWeightNoSet().addAll(cnWeightNoSet);
-                restoreSuccess = true;
+                if (StringUtils.isNotBlank(cnWeightNoJson)) {
+                    Set cnWeightNoSet = BaseUtil.parseJson(cnWeightNoJson, Set.class);
+                    weightContext.getCnWeightNoSet().addAll(cnWeightNoSet);
+                    restoreSuccess = true;
+                }
             }
             if (restoreSuccess) {
                 SwingUtilities.invokeLater(() -> {
@@ -169,7 +171,8 @@ public class CnWeightService {
                 });
             }
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
+            logger.error(BaseUtil.getExceptionStackTrace(e));
         }
     }
 

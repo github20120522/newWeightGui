@@ -161,7 +161,8 @@ public class CnCheckService {
                 });
             }
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
+            logger.error(BaseUtil.getExceptionStackTrace(e));
         }
     }
 

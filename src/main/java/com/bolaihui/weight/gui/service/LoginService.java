@@ -45,9 +45,12 @@ public class LoginService {
                         weightContext.getWeightForm().getCnModelBtn().setEnabled(true);
                         String roleName = result.get("roleName").toString();
                         // 管理员可以设置误差范围
-                        if (StringUtils.contains(roleName, "管理员")) {
+                        if (StringUtils.contains(roleName, "管理")) {
                             weightContext.getWeightForm().getTabbedPane().setEnabledAt(5, true);
                         }
+                        SwingUtilities.invokeLater(() -> {
+                            StatusService.leftCount();
+                        });
                     } else {
                         // 登陆部分
                         weightContext.getWeightForm().getLoginStatus().setText(Constants.LOGIN_FAILURE);

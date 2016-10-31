@@ -50,7 +50,8 @@ public class DownloadService {
             String folder = "自贸达核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
+            logger.error(BaseUtil.getExceptionStackTrace(e));
         }
     }
 
@@ -64,7 +65,7 @@ public class DownloadService {
             String folder = "菜鸟核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
         }
     }
 
@@ -78,7 +79,7 @@ public class DownloadService {
             String folder = "菜鸟拦截";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
         }
     }
 

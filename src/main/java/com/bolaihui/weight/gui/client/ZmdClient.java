@@ -39,6 +39,8 @@ public class ZmdClient {
 
     private static String weightScopeUrl;
 
+    private static String leftCountUrl;
+
     static {
         try (InputStream inputStream = ZmdClient.class.getClassLoader().getResourceAsStream("system.properties")) {
             Properties properties = new Properties();
@@ -56,6 +58,7 @@ public class ZmdClient {
             cnExportUrl = basePath + properties.getProperty("cnExportUrl");
             cnInterceptionUrl = basePath + properties.getProperty("cnInterceptionUrl");
             weightScopeUrl = basePath + properties.getProperty("weightScopeUrl");
+            leftCountUrl = basePath + properties.getProperty("leftCountUrl");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -255,6 +258,19 @@ public class ZmdClient {
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
         return HttpUtil.httpPost(weightScopeUrl, headers, params);
+    }
+
+    public static Map leftCount() throws IOException {
+
+        Map<String, Object> params = new HashMap<>();
+        Date today = new Date();
+        String date = BaseUtil.ymdDateFormat(today);
+        params.put("date", date);
+        params.put("sign", DigestUtils.sha1Hex(date + Constants.simpleKey));
+        Map<String, Object> headers = new HashMap<>();
+        headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        String resultStr = HttpUtil.httpPost(leftCountUrl, headers, params);
+        return BaseUtil.parseJson(resultStr, Map.class);
     }
 
 }

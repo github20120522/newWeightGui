@@ -188,9 +188,11 @@ public class ZmdWeightService {
             File zmdWeightNoFile = new File("./data/zmdWeightNoData.data");
             if (zmdWeightNoFile.exists()) {
                 String zmdWeightNoJson = FileUtils.readFileToString(zmdWeightNoFile);
-                Set zmdWeightNoSet = BaseUtil.parseJson(zmdWeightNoJson, Set.class);
-                weightContext.getZmdWeightNoSet().addAll(zmdWeightNoSet);
-                restoreSuccess = true;
+                if (StringUtils.isNotBlank(zmdWeightNoJson)) {
+                    Set zmdWeightNoSet = BaseUtil.parseJson(zmdWeightNoJson, Set.class);
+                    weightContext.getZmdWeightNoSet().addAll(zmdWeightNoSet);
+                    restoreSuccess = true;
+                }
             }
             if (restoreSuccess) {
                 SwingUtilities.invokeLater(() -> {
@@ -199,7 +201,8 @@ public class ZmdWeightService {
                 });
             }
         } catch (Exception e) {
-            // swallow
+            e.printStackTrace();
+            logger.error(BaseUtil.getExceptionStackTrace(e));
         }
     }
 

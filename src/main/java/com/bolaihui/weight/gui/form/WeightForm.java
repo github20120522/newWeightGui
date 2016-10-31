@@ -77,6 +77,9 @@ public class WeightForm {
     private JButton cnCheckEndBtn;
     private JTextField weightScopeValue;
     private JButton weightScopeBtn;
+    private JLabel zmdLeftCount;
+    private JLabel cnLeftCount;
+    private JButton leftCountBtn;
 
     public WeightForm() {
         init();
@@ -195,6 +198,7 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (zmdWeightEndBtn.isEnabled()) {
                     ZmdWeightService.generateLocation();
+                    StatusService.leftCount();
                 }
             }
         });
@@ -228,6 +232,7 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (zmdScanEndBtn.isEnabled()) {
                     ZmdScanService.generateLocation();
+                    StatusService.leftCount();
                 }
             }
         });
@@ -253,6 +258,7 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (cnWeightEndBtn.isEnabled()) {
                     CnWeightService.generateLocation();
+                    StatusService.leftCount();
                 }
             }
         });
@@ -286,6 +292,7 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (cnCheckEndBtn.isEnabled()) {
                     CnCheckService.cnCheckExport();
+                    StatusService.leftCount();
                 }
             }
         });
@@ -328,6 +335,15 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (weightScopeBtn.isEnabled()) {
                     WeightScopeService.setWeightScope();
+                }
+            }
+        });
+        // 刷新剩余数量
+        leftCountBtn.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (leftCountBtn.isEnabled()) {
+                    StatusService.leftCount();
                 }
             }
         });
@@ -555,6 +571,14 @@ public class WeightForm {
 
     public JTextField getWeightScopeValue() {
         return weightScopeValue;
+    }
+
+    public JLabel getZmdLeftCount() {
+        return zmdLeftCount;
+    }
+
+    public JLabel getCnLeftCount() {
+        return cnLeftCount;
     }
 
 }
