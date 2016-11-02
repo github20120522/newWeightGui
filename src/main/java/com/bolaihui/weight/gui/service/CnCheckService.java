@@ -149,9 +149,11 @@ public class CnCheckService {
             File cnCheckNoFile = new File("./data/cnCheckNoData.data");
             if (cnCheckNoFile.exists()) {
                 String cnCheckNoJson = FileUtils.readFileToString(cnCheckNoFile);
-                Set cnCheckNoSet = BaseUtil.parseJson(cnCheckNoJson, Set.class);
-                weightContext.getCnCheckNoSet().addAll(cnCheckNoSet);
-                restoreSuccess = true;
+                if (StringUtils.isNotBlank(cnCheckNoJson)) {
+                    Set cnCheckNoSet = BaseUtil.parseJson(cnCheckNoJson, Set.class);
+                    weightContext.getCnCheckNoSet().addAll(cnCheckNoSet);
+                    restoreSuccess = true;
+                }
             }
             if (restoreSuccess) {
                 SwingUtilities.invokeLater(() -> {

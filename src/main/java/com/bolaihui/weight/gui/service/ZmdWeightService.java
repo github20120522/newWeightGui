@@ -28,7 +28,8 @@ public class ZmdWeightService {
 
     public static void boxOpen() {
         SwingUtilities.invokeLater(() -> {
-            weightContext.getWeightForm().getZmdWeightModel().setText(Constants.WEIGHT_CHECK_MODEL);
+            // 重量检测手动开启，不通过开启箱码扫描开启
+            // weightContext.getWeightForm().getZmdWeightModel().setText(Constants.WEIGHT_CHECK_MODEL);
             weightContext.getWeightForm().getZmdWeightModel().setForeground(Constants.okColor);
             weightContext.getWeightForm().getZmdWeightBoxNo().setEnabled(true);
             weightContext.getWeightForm().getZmdWeightBoxOpenBtn().setEnabled(false);

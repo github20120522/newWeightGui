@@ -3,6 +3,7 @@ package com.bolaihui.weight.gui.form;
 import com.bolaihui.weight.gui.context.WeightContext;
 import com.bolaihui.weight.gui.service.*;
 import com.bolaihui.weight.gui.util.BaseUtil;
+import com.bolaihui.weight.gui.util.Constants;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -80,6 +81,7 @@ public class WeightForm {
     private JLabel zmdLeftCount;
     private JLabel cnLeftCount;
     private JButton leftCountBtn;
+    private JButton modelChangeBtn;
 
     public WeightForm() {
         init();
@@ -344,6 +346,19 @@ public class WeightForm {
             public void mouseReleased(MouseEvent e) {
                 if (leftCountBtn.isEnabled()) {
                     StatusService.leftCount();
+                }
+            }
+        });
+        // 自贸达称重模式转变
+        modelChangeBtn.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (modelChangeBtn.isEnabled()) {
+                    if (zmdWeightBoxOpenBtn.isEnabled() && connectStatus.getText().equals(Constants.CONNECT_SUCCESS)) {
+                        weightContext.getWeightForm().getZmdWeightModel().setText(Constants.WEIGHT_CHECK_MODEL);
+                    } else {
+                        BaseUtil.textAreaDialog("请注意", "请连接电子秤并开启箱码扫描");
+                    }
                 }
             }
         });
