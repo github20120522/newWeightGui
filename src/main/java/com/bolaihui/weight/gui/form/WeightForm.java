@@ -357,7 +357,7 @@ public class WeightForm {
                     if (zmdWeightBoxOpenBtn.isEnabled() && connectStatus.getText().equals(Constants.CONNECT_SUCCESS)) {
                         weightContext.getWeightForm().getZmdWeightModel().setText(Constants.WEIGHT_CHECK_MODEL);
                     } else {
-                        BaseUtil.textAreaDialog("请注意", "请连接电子秤并开启箱码扫描");
+                        BaseUtil.messageDialog("请连接电子秤并开启箱码扫描");
                     }
                 }
             }
