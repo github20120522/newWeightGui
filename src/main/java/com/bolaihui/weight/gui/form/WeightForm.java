@@ -354,7 +354,7 @@ public class WeightForm {
             @Override
             public void mouseReleased(MouseEvent e) {
                 if (modelChangeBtn.isEnabled()) {
-                    if (zmdWeightBoxOpenBtn.isEnabled() && connectStatus.getText().equals(Constants.CONNECT_SUCCESS)) {
+                    if (zmdWeightBoxNo.isEnabled() && connectStatus.getText().equals(Constants.CONNECT_SUCCESS)) {
                         weightContext.getWeightForm().getZmdWeightModel().setText(Constants.WEIGHT_CHECK_MODEL);
                         weightContext.getWeightForm().getZmdWeightModel().setForeground(Constants.okColor);
                     } else {
