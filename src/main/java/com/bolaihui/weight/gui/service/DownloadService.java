@@ -11,6 +11,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -106,7 +107,7 @@ public class DownloadService {
                 // 5.将数据写入到文件中
                 wb.write(fos);
                 BaseUtil.sound(Constants.DOWNLOAD_SOUND);
-                BaseUtil.messageDialog(sheetName + "！已下载到：" + zmdExportFile.getAbsolutePath());
+                Desktop.getDesktop().open(zmdExportFile.getParentFile());
             } else {
                 BaseUtil.messageDialog(result.get("message").toString());
             }
