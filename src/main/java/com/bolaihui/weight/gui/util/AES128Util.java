@@ -43,7 +43,7 @@ public class AES128Util {
             Properties properties = new Properties();
             properties.load(inputStream);
             String aesKey = properties.getProperty("aesKey");
-            getAESSecretKey(aesKey);
+            secretKeySpecCache.put(aesKey, getAESSecretKey(aesKey));
         } catch (Exception e) {
             e.printStackTrace();
         }
