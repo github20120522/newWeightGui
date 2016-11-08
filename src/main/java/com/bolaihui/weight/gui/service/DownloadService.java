@@ -45,8 +45,8 @@ public class DownloadService {
             String date = weightContext.getWeightForm().getExportDate().getText();
             Map result = ZmdClient.zmdExport(date);
             String sheetName = "自贸达核放单";
-            String[] headers = new String[]{"运单号", "批次", "物流", "电商", "订单"};
-            String[] keys = new String[]{"emsNo", "batchNumbers", "emsCom", "accountBook", "orderNumber"};
+            String[] headers = new String[]{"运单号", "批次", "物流", "电商", "订单", "出区时间"};
+            String[] keys = new String[]{"emsNo", "batchNumbers", "emsCom", "accountBook", "orderNumber", "exitedTime"};
             String folder = "自贸达核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
@@ -60,8 +60,8 @@ public class DownloadService {
             String date = weightContext.getWeightForm().getExportDate().getText();
             Map result = ZmdClient.cnExport(date);
             String sheetName = "菜鸟核放单";
-            String[] headers = new String[]{"运单号", "批次", "物流", "电商", "订单"};
-            String[] keys = new String[]{"emsNo", "batchNumbers", "emsCom", "accountBook", "orderNumber"};
+            String[] headers = new String[]{"运单号", "批次", "物流", "电商", "订单", "出区时间"};
+            String[] keys = new String[]{"emsNo", "batchNumbers", "emsCom", "accountBook", "orderNumber", "exitedTime"};
             String folder = "菜鸟核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {

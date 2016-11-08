@@ -94,8 +94,8 @@ public class CnCheckService {
                         FileUtils.touch(cnCheckExportFile);
                         HSSFWorkbook wb = new HSSFWorkbook();
                         HSSFSheet sheet = wb.createSheet("菜鸟清关数据");
-                        String[] headers = new String[]{"运单号", "订单号", "物流公司", "报关批次", "账册"};
-                        String[] keys = new String[]{"emsNo", "orderNumber", "emsCom", "batchNumbers", "accountBook"};
+                        String[] headers = new String[]{"运单号", "订单号", "物流公司", "报关批次", "账册", "出区时间"};
+                        String[] keys = new String[]{"emsNo", "orderNumber", "emsCom", "batchNumbers", "accountBook", "exitedTime"};
                         BaseUtil.excelDataFill(sheet, headers, keys, list);
                         fos = new FileOutputStream(cnCheckExportFile);
                         wb.write(fos);
