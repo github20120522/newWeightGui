@@ -23,8 +23,9 @@ public class WeightScopeService {
                 weightContext.getWeightForm().getWeightScopeValue().setText(weightScope);
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            logger.error(BaseUtil.getExceptionStackTrace(e));
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 

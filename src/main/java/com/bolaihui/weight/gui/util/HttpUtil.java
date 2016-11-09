@@ -30,11 +30,13 @@ public class HttpUtil {
 
     private static RequestConfig requestConfig;
 
+    private static final int timeout = 5 * 1000;
+
     static {
         requestConfig = RequestConfig.custom()
-                .setConnectTimeout(10000)
-                .setConnectionRequestTimeout(10000)
-                .setSocketTimeout(10000)
+                .setConnectTimeout(timeout)
+                .setConnectionRequestTimeout(timeout)
+                .setSocketTimeout(timeout)
                 .build();
     }
 
@@ -56,8 +58,6 @@ public class HttpUtil {
                 }
                 EntityUtils.consume(entity);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         long endTime = System.currentTimeMillis();
         logger.info("GET [" + url + "] 请求时长：" + (endTime - beginTime));
@@ -89,8 +89,6 @@ public class HttpUtil {
                 }
                 EntityUtils.consume(entity);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         long endTime = System.currentTimeMillis();
         logger.info("POST [" + url + "] 请求时长：" + (endTime - beginTime));

@@ -90,6 +90,37 @@ public class BaseUtil {
         }
     }
 
+    public static void textAreaErrorDialog(String title, String content) {
+
+        if (content.contains("HttpHostConnectException")) {
+            content = "网络异常，连接不到服务器，请检查网络后重试\n" + content;
+        } else if (content.contains("UnknownHostException")) {
+            content = "本地网络异常，无法访问服务器，请检查网络并重试\n" + content;
+        } else if (content.contains("SocketTimeoutException")) {
+            content = "请求超时，请重试\n" + content;
+        } else if (content.contains("NoRouteToHostException")) {
+            content = "网络异常，请检查网络并重试\n" + content;
+        }
+        JTextArea textArea = new JTextArea(content);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        Font font = textArea.getFont();
+        float size = font.getSize();
+        textArea.setFont(font.deriveFont(size));
+        scrollPane.setPreferredSize(new Dimension(930, 430));
+        String inputMsg = JOptionPane.showInputDialog(null, scrollPane, title, JOptionPane.INFORMATION_MESSAGE);
+        if (StringUtils.isNotBlank(inputMsg)) {
+            String finalContent = content;
+            SwingUtilities.invokeLater(() -> {
+                // done 给出需要手动关闭的提示音
+                InputStream warningSoundStream = BaseUtil.class.getClassLoader().getResourceAsStream("warning.wav");
+                AudioPlayer.player.start(warningSoundStream);
+                textAreaErrorDialog(title, finalContent);
+            });
+        }
+    }
+
     public static void sound(String type) {
         WeightContext weightContext = WeightContext.getInstance();
         weightContext.getExecutorService().execute(() -> {

@@ -51,8 +51,9 @@ public class DownloadService {
             String folder = "自贸达核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            e.printStackTrace();
-            logger.error(BaseUtil.getExceptionStackTrace(e));
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 
@@ -66,7 +67,9 @@ public class DownloadService {
             String folder = "菜鸟核放单";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            e.printStackTrace();
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 
@@ -80,7 +83,9 @@ public class DownloadService {
             String folder = "菜鸟拦截";
             buildExcel(date, result, sheetName, folder, headers, keys);
         } catch (Exception e) {
-            e.printStackTrace();
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 
@@ -112,8 +117,9 @@ public class DownloadService {
                 BaseUtil.messageDialog(result.get("message").toString());
             }
         } catch (Exception e) {
-            logger.error(BaseUtil.getExceptionStackTrace(e));
-            BaseUtil.messageDialog("网络错误");
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         } finally {
             if (fos != null) {
                 try {

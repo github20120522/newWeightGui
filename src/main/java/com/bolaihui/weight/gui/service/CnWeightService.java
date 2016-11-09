@@ -67,11 +67,13 @@ public class CnWeightService {
             }
             weightContext.getWeightForm().getCnWeightEmsNo().requestFocus();
         } catch (JsonProcessingException e) {
-            logger.error(BaseUtil.getExceptionStackTrace(e));
-            BaseUtil.messageDialog("Json序列化错误");
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         } catch (Exception e) {
-            logger.error(BaseUtil.getExceptionStackTrace(e));
-            BaseUtil.messageDialog("网络错误");
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 
@@ -130,9 +132,9 @@ public class CnWeightService {
                 weightContext.getWeightForm().getCnWeightBoxNo().setText("");
                 weightContext.getWeightForm().getCnWeightEmsNo().requestFocus();
             } catch (Exception e) {
-                logger.error(BaseUtil.getExceptionStackTrace(e));
-                e.printStackTrace();
-                BaseUtil.messageDialog("网络超时");
+                String error = BaseUtil.getExceptionStackTrace(e);
+                logger.error(error);
+                BaseUtil.textAreaErrorDialog("错误", error);
                 weightContext.getWeightForm().getCnWeightEmsNo().setText("");
                 weightContext.getWeightForm().getCnWeightBoxNo().setText("");
                 weightContext.getWeightForm().getCnWeightEmsNo().requestFocus();

@@ -70,9 +70,9 @@ public class CnCheckService {
                 weightContext.getWeightForm().getCnCheckEmsNo().setText("");
                 weightContext.getWeightForm().getCnCheckEmsNo().requestFocus();
             } catch (Exception e) {
-                logger.error(BaseUtil.getExceptionStackTrace(e));
-                e.printStackTrace();
-                BaseUtil.messageDialog("网络错误");
+                String error = BaseUtil.getExceptionStackTrace(e);
+                logger.error(error);
+                BaseUtil.textAreaErrorDialog("错误", error);
             }
         });
     }
@@ -102,8 +102,9 @@ public class CnCheckService {
                         BaseUtil.sound(Constants.DOWNLOAD_SOUND);
                         BaseUtil.messageDialog("菜鸟清关数据！已下载到：" + cnCheckExportFile.getAbsolutePath());
                     } catch (Exception e) {
-                        logger.error(BaseUtil.getExceptionStackTrace(e));
-                        BaseUtil.messageDialog(e.toString());
+                        String error = BaseUtil.getExceptionStackTrace(e);
+                        logger.error(error);
+                        BaseUtil.textAreaErrorDialog("错误", error);
                     } finally {
                         if (fos != null) {
                             try {
@@ -124,11 +125,13 @@ public class CnCheckService {
             }
             weightContext.getWeightForm().getCnCheckEmsNo().requestFocus();
         } catch (JsonProcessingException e) {
-            logger.error(BaseUtil.getExceptionStackTrace(e));
-            BaseUtil.messageDialog("Json序列化错误");
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         } catch (Exception e) {
-            logger.error(BaseUtil.getExceptionStackTrace(e));
-            BaseUtil.messageDialog("网络错误");
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 

@@ -23,8 +23,9 @@ public class StatusService {
             weightContext.getWeightForm().getZmdLeftCount().setText(result.get("zmdLeftCount").toString());
             weightContext.getWeightForm().getCnLeftCount().setText(result.get("cnLeftCount").toString());
         } catch (Exception e) {
-            e.printStackTrace();
-            logger.error(BaseUtil.getExceptionStackTrace(e));
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 }

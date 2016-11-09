@@ -60,9 +60,9 @@ public class LoginService {
                     }
                 }
             } catch (Exception e) {
-                e.printStackTrace();
-                BaseUtil.messageDialog("网络超时");
-                logger.error(BaseUtil.getExceptionStackTrace(e));
+                String error = BaseUtil.getExceptionStackTrace(e);
+                logger.error(error);
+                BaseUtil.textAreaErrorDialog("错误", error);
             }
         });
     }

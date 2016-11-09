@@ -5,6 +5,8 @@ import com.bolaihui.weight.gui.util.BaseUtil;
 import com.bolaihui.weight.gui.util.Constants;
 import com.bolaihui.weight.gui.util.HttpUtil;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,6 +16,8 @@ import java.util.*;
  * Created by Administrator on 2016/10/26 0026.
  */
 public class ZmdClient {
+
+    private static Logger logger = LoggerFactory.getLogger(ZmdClient.class);
 
     private static String aesKey;
 
@@ -60,7 +64,9 @@ public class ZmdClient {
             weightScopeUrl = basePath + properties.getProperty("weightScopeUrl");
             leftCountUrl = basePath + properties.getProperty("leftCountUrl");
         } catch (IOException e) {
-            e.printStackTrace();
+            String error = BaseUtil.getExceptionStackTrace(e);
+            logger.error(error);
+            BaseUtil.textAreaErrorDialog("错误", error);
         }
     }
 
