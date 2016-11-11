@@ -30,13 +30,23 @@ public class HttpUtil {
 
     private static RequestConfig requestConfig;
 
+    public static RequestConfig longRequestConfig;
+
     private static final int timeout = 5 * 1000;
+
+    private static final int longTimeout = 60 * 1000;
 
     static {
         requestConfig = RequestConfig.custom()
                 .setConnectTimeout(timeout)
                 .setConnectionRequestTimeout(timeout)
                 .setSocketTimeout(timeout)
+                .build();
+
+        longRequestConfig = RequestConfig.custom()
+                .setConnectTimeout(longTimeout)
+                .setConnectionRequestTimeout(longTimeout)
+                .setSocketTimeout(longTimeout)
                 .build();
     }
 
@@ -69,6 +79,37 @@ public class HttpUtil {
         long beginTime = System.currentTimeMillis();
         HttpPost httpPost = new HttpPost(url);
         httpPost.setConfig(requestConfig);
+        List<NameValuePair> pairs = new ArrayList<>();
+        for (Object o : params.keySet()) {
+            String key = o.toString();
+            pairs.add(new BasicNameValuePair(key, params.get(key).toString()));
+        }
+        UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(pairs, "utf-8");
+        for (Object o : headers.keySet()) {
+            String key = o.toString();
+            httpPost.setHeader(new BasicHeader(key, headers.get(key).toString()));
+        }
+        httpPost.setEntity(uefEntity);
+        String result = null;
+        try (CloseableHttpResponse httpResponse = httpClient.execute(httpPost)) {
+            HttpEntity entity = httpResponse.getEntity();
+            if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+                if (entity != null) {
+                    result = EntityUtils.toString(entity, "utf-8");
+                }
+                EntityUtils.consume(entity);
+            }
+        }
+        long endTime = System.currentTimeMillis();
+        logger.info("POST [" + url + "] 请求时长：" + (endTime - beginTime));
+        return result;
+    }
+
+    public static String httpPost(String url, Map headers, Map params, RequestConfig customRequestConfig) throws IOException {
+
+        long beginTime = System.currentTimeMillis();
+        HttpPost httpPost = new HttpPost(url);
+        httpPost.setConfig(customRequestConfig);
         List<NameValuePair> pairs = new ArrayList<>();
         for (Object o : params.keySet()) {
             String key = o.toString();

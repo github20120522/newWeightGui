@@ -190,7 +190,7 @@ public class ZmdClient {
         params.put("yesEmsNosJson", AES128Util.encrypt(aesKey, yesEmsNosJson));
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        String resultStr = HttpUtil.httpPost(cnCheckFinishUrl, headers, params);
+        String resultStr = HttpUtil.httpPost(cnCheckFinishUrl, headers, params, HttpUtil.longRequestConfig);
         return BaseUtil.parseJson(resultStr, Map.class);
     }
 
@@ -221,7 +221,7 @@ public class ZmdClient {
         params.put("sign", DigestUtils.sha1Hex(date + Constants.simpleKey));
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        String resultStr = HttpUtil.httpPost(zmdExportUrl, headers, params);
+        String resultStr = HttpUtil.httpPost(zmdExportUrl, headers, params, HttpUtil.longRequestConfig);
         return BaseUtil.parseJson(resultStr, Map.class);
     }
 
@@ -235,7 +235,7 @@ public class ZmdClient {
         params.put("sign", DigestUtils.sha1Hex(date + Constants.simpleKey));
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        String resultStr = HttpUtil.httpPost(cnExportUrl, headers, params);
+        String resultStr = HttpUtil.httpPost(cnExportUrl, headers, params, HttpUtil.longRequestConfig);
         return BaseUtil.parseJson(resultStr, Map.class);
     }
 
@@ -249,7 +249,7 @@ public class ZmdClient {
         params.put("sign", DigestUtils.sha1Hex(date + Constants.simpleKey));
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        String resultStr = HttpUtil.httpPost(cnInterceptionUrl, headers, params);
+        String resultStr = HttpUtil.httpPost(cnInterceptionUrl, headers, params, HttpUtil.longRequestConfig);
         return BaseUtil.parseJson(resultStr, Map.class);
     }
 
