@@ -11,6 +11,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -54,6 +55,13 @@ public class DownloadService {
             String error = BaseUtil.getExceptionStackTrace(e);
             logger.error(error);
             BaseUtil.textAreaErrorDialog("错误", error);
+        } finally {
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    weightContext.getWeightForm().getZmdExportBtn().setEnabled(true);
+                }
+            });
         }
     }
 
@@ -70,6 +78,13 @@ public class DownloadService {
             String error = BaseUtil.getExceptionStackTrace(e);
             logger.error(error);
             BaseUtil.textAreaErrorDialog("错误", error);
+        } finally {
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    weightContext.getWeightForm().getCnExportBtn().setEnabled(true);
+                }
+            });
         }
     }
 
@@ -86,6 +101,13 @@ public class DownloadService {
             String error = BaseUtil.getExceptionStackTrace(e);
             logger.error(error);
             BaseUtil.textAreaErrorDialog("错误", error);
+        } finally {
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    weightContext.getWeightForm().getCnInterceptBtn().setEnabled(true);
+                }
+            });
         }
     }
 

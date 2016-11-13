@@ -8,6 +8,7 @@ import com.bolaihui.weight.gui.util.Constants;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
@@ -89,6 +90,63 @@ public class WeightForm {
     }
 
     private void init() {
+
+        leftCountBtn.setBorder(null);
+        leftCountBtn.setFocusPainted(false);
+        leftCountBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        connectBtn.setBorder(null);
+        connectBtn.setFocusPainted(false);
+        connectBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        disConnectBtn.setBorder(null);
+        disConnectBtn.setFocusPainted(false);
+        disConnectBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        modelChangeBtn.setBorder(null);
+        modelChangeBtn.setFocusPainted(false);
+        modelChangeBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdWeightBeginBtn.setBorder(null);
+        zmdWeightBeginBtn.setFocusPainted(false);
+        zmdWeightBeginBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdWeightEndBtn.setBorder(null);
+        zmdWeightEndBtn.setFocusPainted(false);
+        zmdWeightEndBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdWeightBoxOpenBtn.setBorder(null);
+        zmdWeightBoxOpenBtn.setFocusPainted(false);
+        zmdWeightBoxOpenBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdWeightBoxCloseBtn.setBorder(null);
+        zmdWeightBoxCloseBtn.setFocusPainted(false);
+        zmdWeightBoxCloseBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdScanBeginBtn.setBorder(null);
+        zmdScanBeginBtn.setFocusPainted(false);
+        zmdScanBeginBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        zmdScanEndBtn.setBorder(null);
+        zmdScanEndBtn.setFocusPainted(false);
+        zmdScanEndBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        cnWeightBeginBtn.setBorder(null);
+        cnWeightBeginBtn.setFocusPainted(false);
+        cnWeightBeginBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        cnWeightEndBtn.setBorder(null);
+        cnWeightEndBtn.setFocusPainted(false);
+        cnWeightEndBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        cnCheckBeginBtn.setBorder(null);
+        cnCheckBeginBtn.setFocusPainted(false);
+        cnCheckBeginBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        cnCheckEndBtn.setBorder(null);
+        cnCheckEndBtn.setFocusPainted(false);
+        cnCheckEndBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
         weightContext.setWeightForm(this);
         exportDate.setText(BaseUtil.ymdDateFormat(new Date()));
         // done 数据恢复，如果有的话
@@ -311,7 +369,18 @@ public class WeightForm {
             @Override
             public void mouseReleased(MouseEvent e) {
                 if (zmdExportBtn.isEnabled()) {
-                    DownloadService.zmdExport();
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            zmdExportBtn.setEnabled(false);
+                        }
+                    });
+                    weightContext.getExecutorService().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            DownloadService.zmdExport();
+                        }
+                    });
                 }
             }
         });
@@ -319,7 +388,18 @@ public class WeightForm {
             @Override
             public void mouseReleased(MouseEvent e) {
                 if (cnExportBtn.isEnabled()) {
-                    DownloadService.cnExport();
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            cnExportBtn.setEnabled(false);
+                        }
+                    });
+                    weightContext.getExecutorService().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            DownloadService.cnExport();
+                        }
+                    });
                 }
             }
         });
@@ -327,7 +407,18 @@ public class WeightForm {
             @Override
             public void mouseReleased(MouseEvent e) {
                 if (cnInterceptBtn.isEnabled()) {
-                    DownloadService.cnInterceptionExport();
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            cnInterceptBtn.setEnabled(false);
+                        }
+                    });
+                    weightContext.getExecutorService().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            DownloadService.cnInterceptionExport();
+                        }
+                    });
                 }
             }
         });

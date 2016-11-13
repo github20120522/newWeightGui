@@ -82,7 +82,7 @@
           </component>
           <component id="ff5f1" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font style="1"/>
@@ -99,7 +99,7 @@
               </grid>
             </constraints>
             <properties>
-              <font style="3"/>
+              <font size="14" style="1"/>
               <foreground color="-12316161"/>
               <text value="尚未登陆"/>
             </properties>
@@ -113,9 +113,9 @@
               </grid>
             </constraints>
             <properties>
-              <font style="1"/>
+              <font size="14" style="1"/>
               <foreground color="-5439233"/>
-              <text value="☆☆☆☆"/>
+              <text value="---"/>
             </properties>
           </component>
           <component id="e58a8" class="javax.swing.JLabel">
@@ -147,9 +147,10 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-297"/>
+              <background color="-1052689"/>
               <enabled value="true"/>
               <foreground color="-12316161"/>
+              <icon value="refresh.png"/>
               <text value="刷新"/>
             </properties>
           </component>
@@ -189,7 +190,7 @@
         <children>
           <component id="e43cb" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font style="1"/>
@@ -210,7 +211,7 @@
               </grid>
             </constraints>
             <properties>
-              <font style="3"/>
+              <font size="14" style="1"/>
               <foreground color="-12316161"/>
               <text value="尚未连接"/>
             </properties>
@@ -224,9 +225,10 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-7209076"/>
+              <background color="-1052689"/>
               <enabled value="false"/>
               <foreground color="-12316161"/>
+              <icon value="connect.png"/>
               <text value="连接"/>
             </properties>
           </component>
@@ -239,9 +241,10 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-41121"/>
+              <background color="-1052689"/>
               <enabled value="false"/>
               <foreground color="-12316161"/>
+              <icon value="disconnect.png"/>
               <text value="断开"/>
             </properties>
           </component>
@@ -364,7 +367,9 @@
                   <enabled value="false"/>
                   <font size="72" style="3"/>
                   <foreground color="-37376"/>
-                  <text value="自贸达模式"/>
+                  <icon value="zmdLogo.png"/>
+                  <label value=""/>
+                  <text value=""/>
                 </properties>
               </component>
               <component id="28294" class="javax.swing.JButton" binding="cnModelBtn">
@@ -379,7 +384,9 @@
                   <enabled value="false"/>
                   <font size="72" style="3"/>
                   <foreground color="-65292"/>
-                  <text value="菜鸟模式"/>
+                  <icon value="cainiaoLogo.png"/>
+                  <label value=""/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
@@ -518,9 +525,9 @@
                   <component id="eb7b5" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="90" height="-1"/>
-                        <preferred-size width="90" height="-1"/>
-                        <maximum-size width="90" height="-1"/>
+                        <minimum-size width="30" height="-1"/>
+                        <preferred-size width="30" height="-1"/>
+                        <maximum-size width="30" height="-1"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -550,9 +557,10 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-1536"/>
+                      <background color="-1052689"/>
                       <enabled value="true"/>
                       <foreground color="-12316161"/>
+                      <icon value="check.png"/>
                       <text value="开启检测"/>
                     </properties>
                   </component>
@@ -569,14 +577,14 @@
                   <component id="ce338" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="-1" height="45"/>
-                        <preferred-size width="-1" height="45"/>
-                        <maximum-size width="-1" height="45"/>
+                        <minimum-size width="-1" height="30"/>
+                        <preferred-size width="-1" height="30"/>
+                        <maximum-size width="-1" height="30"/>
                       </grid>
                     </constraints>
                     <properties>
-                      <font size="48" style="1"/>
-                      <foreground color="-15422711"/>
+                      <font size="28" style="1"/>
+                      <foreground color="-16777216"/>
                       <text value="称重重量"/>
                     </properties>
                   </component>
@@ -593,13 +601,13 @@
                   <component id="e69c0" class="javax.swing.JLabel" binding="zmdWeightValue">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="-1" height="40"/>
-                        <preferred-size width="-1" height="40"/>
-                        <maximum-size width="-1" height="40"/>
+                        <minimum-size width="-1" height="55"/>
+                        <preferred-size width="-1" height="55"/>
+                        <maximum-size width="-1" height="55"/>
                       </grid>
                     </constraints>
                     <properties>
-                      <font size="28" style="1"/>
+                      <font size="48" style="1"/>
                       <foreground color="-12316161"/>
                       <text value="0.0kg"/>
                     </properties>
@@ -623,7 +631,7 @@
                     <properties>
                       <font size="26" style="1"/>
                       <foreground color="-3203329"/>
-                      <text value="上一单:"/>
+                      <text value="上单信息:"/>
                     </properties>
                   </component>
                   <component id="e32aa" class="javax.swing.JLabel" binding="zmdWeightEmsInfo">
@@ -643,9 +651,9 @@
                   <hspacer id="7b91d">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <minimum-size width="290" height="-1"/>
-                        <preferred-size width="290" height="-1"/>
-                        <maximum-size width="290" height="-1"/>
+                        <minimum-size width="170" height="-1"/>
+                        <preferred-size width="170" height="-1"/>
+                        <maximum-size width="170" height="-1"/>
                       </grid>
                     </constraints>
                   </hspacer>
@@ -752,9 +760,10 @@
                           </grid>
                         </constraints>
                         <properties>
-                          <background color="-16711906"/>
+                          <background color="-1052689"/>
                           <enabled value="false"/>
                           <foreground color="-12316161"/>
+                          <icon value="open.png"/>
                           <text value="开启"/>
                         </properties>
                       </component>
@@ -767,10 +776,13 @@
                           </grid>
                         </constraints>
                         <properties>
-                          <background color="-58349"/>
+                          <background color="-1052689"/>
                           <enabled value="false"/>
                           <foreground color="-12316161"/>
-                          <text value="禁用"/>
+                          <icon value="close.png"/>
+                          <inheritsPopupMenu value="false"/>
+                          <label value="关闭"/>
+                          <text value="关闭"/>
                         </properties>
                       </component>
                     </children>
@@ -1083,7 +1095,7 @@
                     <properties>
                       <font size="26" style="1"/>
                       <foreground color="-3203329"/>
-                      <text value="上一单:"/>
+                      <text value="上单信息:"/>
                     </properties>
                   </component>
                   <component id="138f1" class="javax.swing.JLabel" binding="zmdScanEmsInfo">
@@ -1103,9 +1115,9 @@
                   <hspacer id="f8c89">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <minimum-size width="330" height="-1"/>
-                        <preferred-size width="330" height="-1"/>
-                        <maximum-size width="330" height="-1"/>
+                        <minimum-size width="170" height="-1"/>
+                        <preferred-size width="170" height="-1"/>
+                        <maximum-size width="170" height="-1"/>
                       </grid>
                     </constraints>
                   </hspacer>
@@ -1285,27 +1297,27 @@
               <component id="199c0" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                    <minimum-size width="-1" height="45"/>
-                    <preferred-size width="-1" height="45"/>
-                    <maximum-size width="-1" height="45"/>
+                    <minimum-size width="-1" height="30"/>
+                    <preferred-size width="-1" height="30"/>
+                    <maximum-size width="-1" height="30"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <font size="48" style="1"/>
-                  <foreground color="-15422711"/>
+                  <font size="28" style="1"/>
+                  <foreground color="-16777216"/>
                   <text value="称重重量"/>
                 </properties>
               </component>
               <component id="529ac" class="javax.swing.JLabel" binding="cnWeightValue">
                 <constraints>
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                    <minimum-size width="-1" height="40"/>
-                    <preferred-size width="-1" height="40"/>
-                    <maximum-size width="-1" height="40"/>
+                    <minimum-size width="-1" height="55"/>
+                    <preferred-size width="-1" height="55"/>
+                    <maximum-size width="-1" height="55"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <font size="28" style="1"/>
+                  <font size="48" style="1"/>
                   <foreground color="-12316161"/>
                   <text value="0.0kg"/>
                 </properties>
@@ -1327,7 +1339,7 @@
                     <properties>
                       <font size="26" style="1"/>
                       <foreground color="-3203329"/>
-                      <text value="上一单:"/>
+                      <text value="上单信息:"/>
                     </properties>
                   </component>
                   <component id="25dce" class="javax.swing.JLabel" binding="cnWeightEmsInfo">
@@ -1347,9 +1359,9 @@
                   <hspacer id="97f03">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <minimum-size width="290" height="-1"/>
-                        <preferred-size width="290" height="-1"/>
-                        <maximum-size width="290" height="-1"/>
+                        <minimum-size width="170" height="-1"/>
+                        <preferred-size width="170" height="-1"/>
+                        <maximum-size width="170" height="-1"/>
                       </grid>
                     </constraints>
                   </hspacer>
@@ -1660,7 +1672,7 @@
                     <properties>
                       <font size="26" style="1"/>
                       <foreground color="-3203329"/>
-                      <text value="上一单:"/>
+                      <text value="上单信息:"/>
                     </properties>
                   </component>
                   <component id="d4b20" class="javax.swing.JLabel" binding="cnCheckEmsInfo">
@@ -1680,9 +1692,9 @@
                   <hspacer id="235b4">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <minimum-size width="330" height="-1"/>
-                        <preferred-size width="330" height="-1"/>
-                        <maximum-size width="330" height="-1"/>
+                        <minimum-size width="170" height="-1"/>
+                        <preferred-size width="170" height="-1"/>
+                        <maximum-size width="170" height="-1"/>
                       </grid>
                     </constraints>
                   </hspacer>
@@ -1839,6 +1851,7 @@
                 </constraints>
                 <properties>
                   <font size="20"/>
+                  <icon value="write.png"/>
                   <text value="设置"/>
                 </properties>
               </component>
