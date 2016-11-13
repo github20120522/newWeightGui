@@ -91,14 +91,14 @@ public class ZmdScanService {
                             weightContext.getZmdScanYesSet().remove(emsNo);
                         }
                         weightContext.getWeightForm().getZmdScanEmsColor().setBackground(Color.RED);
-                        String message = result.get("message").toString();
-                        if (StringUtils.isNotBlank(message)) {
-                            if (result.get("dup") != null) {
-                                message += "\n\n";
-                                message += "重复扫描：" + result.get("dup");
-                            }
-                            BaseUtil.textAreaDialog("请注意，这个订单有问题", message);
+                    }
+                    String message = result.get("message").toString();
+                    if (StringUtils.isNotBlank(message)) {
+                        if (result.get("dup") != null) {
+                            message += "\n\n";
+                            message += "重复扫描：" + result.get("dup");
                         }
+                        BaseUtil.textAreaDialog("请注意，这个订单有问题", message);
                     }
                     JLabel zmdScanEmsInfo = weightContext.getWeightForm().getZmdScanEmsInfo();
                     String emsInfo = emsNo + " | " + result.get("status").toString();

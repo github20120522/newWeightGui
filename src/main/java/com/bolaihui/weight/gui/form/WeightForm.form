@@ -411,10 +411,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-16711906"/>
+                      <background color="-1052689"/>
                       <enabled value="false"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="begin.png"/>
                       <text value="清零开始"/>
                     </properties>
                   </component>
@@ -427,10 +428,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-58349"/>
+                      <background color="-1052689"/>
                       <enabled value="false"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="end.png"/>
                       <text value="结束生成托盘位置"/>
                     </properties>
                   </component>
@@ -923,9 +925,10 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-16711906"/>
+                      <background color="-1052689"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="begin.png"/>
                       <text value="清零开始"/>
                     </properties>
                   </component>
@@ -938,10 +941,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-58349"/>
+                      <background color="-1052689"/>
                       <enabled value="false"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="end.png"/>
                       <text value="结束生成托盘位置"/>
                     </properties>
                   </component>
@@ -1252,9 +1256,10 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-16711906"/>
+                      <background color="-1052689"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="begin.png"/>
                       <text value="清零开始"/>
                     </properties>
                   </component>
@@ -1267,10 +1272,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-58349"/>
+                      <background color="-1052689"/>
                       <enabled value="false"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="end.png"/>
                       <text value="结束生成托盘位置"/>
                     </properties>
                   </component>
@@ -1533,9 +1539,10 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-16711906"/>
+                      <background color="-1052689"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="begin.png"/>
                       <text value="清零开始"/>
                     </properties>
                   </component>
@@ -1548,10 +1555,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-58349"/>
+                      <background color="-1052689"/>
                       <enabled value="false"/>
                       <font size="26" style="3"/>
-                      <foreground color="-12316161"/>
+                      <foreground color="-15422711"/>
+                      <icon value="end.png"/>
                       <text value="结束导出扫描核放单"/>
                     </properties>
                   </component>
