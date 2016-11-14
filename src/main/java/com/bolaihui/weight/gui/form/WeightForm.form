@@ -267,7 +267,8 @@
             </constraints>
             <properties>
               <enabled value="false"/>
-              <text value="核放单导出"/>
+              <icon value="msg.png"/>
+              <text value="核放单"/>
             </properties>
           </component>
           <component id="93c28" class="javax.swing.JLabel">
@@ -289,7 +290,8 @@
             </constraints>
             <properties>
               <enabled value="false"/>
-              <text value="核放单导出"/>
+              <icon value="msg.png"/>
+              <text value="核放单"/>
             </properties>
           </component>
           <component id="d19ea" class="javax.swing.JButton" binding="cnInterceptBtn">
@@ -302,7 +304,8 @@
             </constraints>
             <properties>
               <enabled value="false"/>
-              <text value="拦截订单导出"/>
+              <icon value="msg.png"/>
+              <text value="拦截订单"/>
             </properties>
           </component>
           <component id="7460f" class="javax.swing.JLabel">

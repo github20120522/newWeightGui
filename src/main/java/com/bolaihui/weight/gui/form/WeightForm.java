@@ -91,6 +91,9 @@ public class WeightForm {
 
     private void init() {
 
+        zmdModelBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        cnModelBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
         leftCountBtn.setBorder(null);
         leftCountBtn.setFocusPainted(false);
         leftCountBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
