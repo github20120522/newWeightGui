@@ -145,8 +145,8 @@ public class ZmdWeightService {
                         }
                         weightContext.getWeightForm().getZmdWeightEmsColor().setBackground(Color.RED);
                     }
-                    String message = result.get("message").toString();
-                    if (StringUtils.isNotBlank(message)) {
+                    if (result.get("message") != null) {
+                        String message = result.get("message").toString();
                         if (result.get("dup") != null) {
                             message += "\n\n";
                             message += "重复扫描：" + result.get("dup");
