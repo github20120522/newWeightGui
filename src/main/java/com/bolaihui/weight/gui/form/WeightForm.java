@@ -83,6 +83,8 @@ public class WeightForm {
     private JLabel cnLeftCount;
     private JButton leftCountBtn;
     private JButton modelChangeBtn;
+    private JList scopeList;
+    private JTextField scopeBoxNo;
 
     public WeightForm() {
         init();
@@ -183,7 +185,7 @@ public class WeightForm {
                         cnCheckEmsNo.requestFocus();
                         break;
                     case 5:
-                        WeightScopeService.getWeightScope();
+                        WeightScopeService.getWeightScopeList();
                         break;
                 }
             }
@@ -457,6 +459,15 @@ public class WeightForm {
                 }
             }
         });
+        scopeList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                String boxScope = scopeList.getModel().getElementAt(scopeList.locationToIndex(e.getPoint())).toString();
+                String[] data = boxScope.split("_");
+                scopeBoxNo.setText(data[0]);
+                weightScopeValue.setText(data[1]);
+            }
+        });
     }
 
     public JTextField getUserName() {
@@ -691,4 +702,11 @@ public class WeightForm {
         return cnLeftCount;
     }
 
+    public JList getScopeList() {
+        return scopeList;
+    }
+
+    public JTextField getScopeBoxNo() {
+        return scopeBoxNo;
+    }
 }

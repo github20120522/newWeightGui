@@ -253,14 +253,14 @@ public class ZmdClient {
         return BaseUtil.parseJson(resultStr, Map.class);
     }
 
-    public static String weightScope(String weightScope) throws IOException {
+    public static String weightScopeList(String boxScopeValue) throws IOException {
 
         Map<String, Object> params = new HashMap<>();
         Date today = new Date();
         String date = BaseUtil.ymdDateFormat(today);
         params.put("date", date);
-        params.put("weightScope", weightScope);
         params.put("sign", DigestUtils.sha1Hex(date + Constants.simpleKey));
+        params.put("boxScopeValue", boxScopeValue);
         Map<String, Object> headers = new HashMap<>();
         headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
         return HttpUtil.httpPost(weightScopeUrl, headers, params);
